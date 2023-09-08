@@ -126,7 +126,13 @@
 
       button.onclick = function(el) {
         // console.log(el, d, i, sources)
-        download(d);
+        // download every 1 second
+        let svgInterval = setInterval(function () { download(d) }, 1000);
+
+        // stop after 10 seconds
+        setTimeout(function () { clearInterval( svgInterval )}, 10000);
+
+        
       };
 
     });
