@@ -195,6 +195,10 @@
       filename = window.document.title.replace(/[^a-z0-9]/gi, '-').toLowerCase();
     }
 
+    now = new Date;
+
+    filename = now.valueOf() + filename;
+
     var url = window.URL.createObjectURL(new Blob(source.source, { "type" : "text\/xml" }));
 
     var a = document.createElement("a");
