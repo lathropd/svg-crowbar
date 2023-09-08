@@ -201,7 +201,7 @@
       filename = window.document.title.replace(/[^a-z0-9]/gi, '-').toLowerCase();
     }
 
-    let date =  Date;
+    let date =  new Date();
     filename = date.valueOf() + filename;
 
     var url = window.URL.createObjectURL(new Blob(source.source, { "type" : "text\/xml" }));
